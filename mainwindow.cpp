@@ -55,7 +55,7 @@
 #include "gui/basic/basicform.h"
 
 MainWindow::MainWindow()
-    : mdiArea(new QMdiArea), basicForm(new BasicForm)
+    : mdiArea(new QMdiArea), basicForm(BASICFORM)
 {
     mdiArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
     mdiArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);

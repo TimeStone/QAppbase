@@ -51,29 +51,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
-
 #include "mainwindow.h"
-#include "core/chillout/chillout.h"
-
-void setupCrashHandler()
-{
-    auto &chillout = Debug::Chillout::getInstance();
-
-#ifdef _WIN32
-    chillout.init(qApp->applicationName().toStdWString(), qApp->applicationDirPath().toStdWString());
-#else
-    chillout.init(qApp->applicationName().toStdString(), qApp->applicationDirPath().toStdString());
-#endif
-
-    chillout.setBacktraceCallback([](const char * const stackEntry) {
-          fprintf(stderr, "my trace:  %s", stackEntry);
-    });
-
-    chillout.setCrashCallback([this]() {
-        for (CrashHandler& hnd : crashHandlers)
-            hnd();
-    });
-}
 
 int main(int argc, char *argv[])
 {

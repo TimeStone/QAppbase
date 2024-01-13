@@ -7,14 +7,16 @@ HEADERS       = mainwindow.h \
     config/appconfig.h \
     utils/utils.h \
     core/global.h \
-    core/appbase.h
+    core/appbase.h \
+    gui/historytree/historytree.h
 SOURCES       = main.cpp \
                 mainwindow.cpp \
                 gui/mdi/mdichild.cpp \
     gui/basic/basicform.cpp \
     config/appconfig.cpp \
     utils/utils.cpp \
-    core/appbase.cpp
+    core/appbase.cpp \
+    gui/historytree/historytree.cpp
 RESOURCES     = AppBase.qrc
 
 # install
@@ -22,7 +24,8 @@ RESOURCES     = AppBase.qrc
 #INSTALLS += target
 
 FORMS += \
-    gui/basic/basicform.ui
+    gui/basic/basicform.ui \
+    gui/historytree/historytree.ui
 
 win32: {
     LIBS += -lversion
