@@ -2,6 +2,7 @@
 #define APPCONFIG_H
 
 #include <QObject>
+#include "core/global.h"
 
 typedef struct ConfigMap{
     QString AppName = "BaseMap";
@@ -9,10 +10,15 @@ typedef struct ConfigMap{
     QString css = "BaseApp.css";
 }CMAP;
 
-class AppConfig
+class AppConfig : public QObject
 {
+    Q_OBJECT
+    DECLARE_SINGLETON(AppConfig)
+
 public:
     AppConfig();
 };
+
+#define APPCONFIG AppConfig::getInstance()
 
 #endif // APPCONFIG_H

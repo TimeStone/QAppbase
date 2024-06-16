@@ -1,6 +1,8 @@
 QT += widgets
 requires(qtConfig(filedialog))
 
+INCLUDEPATH += $$PWD/..
+
 HEADERS       = mainwindow.h \
                 gui/mdi/mdichild.h \
     gui/basic/basicform.h \
@@ -8,7 +10,8 @@ HEADERS       = mainwindow.h \
     utils/utils.h \
     core/global.h \
     core/appbase.h \
-    gui/historytree/historytree.h
+    gui/historytree/historytree.h \
+    utils/utils.h
 SOURCES       = main.cpp \
                 mainwindow.cpp \
                 gui/mdi/mdichild.cpp \
@@ -16,7 +19,8 @@ SOURCES       = main.cpp \
     config/appconfig.cpp \
     utils/utils.cpp \
     core/appbase.cpp \
-    gui/historytree/historytree.cpp
+    gui/historytree/historytree.cpp \
+    utils/utils.cpp
 RESOURCES     = AppBase.qrc
 
 # install

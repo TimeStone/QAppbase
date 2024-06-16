@@ -8,7 +8,7 @@ class AppBase : public QObject
 {
     Q_OBJECT
 
-    //DECLARE_SINGLETON(SQLiteStudio)
+    DECLARE_SINGLETON(AppBase)
 public:
     AppConfig *appConfig;
     AppBase();

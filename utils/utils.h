@@ -2,12 +2,13 @@
 #define UTILS_H
 
 #include <QObject>
+
 class Utils : public QObject
 {
     Q_OBJECT
 public:
     explicit Utils(QObject *parent = nullptr);
-    void crashIt();
+    void static consolePrint(QString msg, bool isError);
 
 signals:
 
