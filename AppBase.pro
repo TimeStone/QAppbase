@@ -4,23 +4,21 @@ requires(qtConfig(filedialog))
 INCLUDEPATH += $$PWD/..
 
 HEADERS       = mainwindow.h \
+    console/cli/logger/apploghandler.h \
                 gui/mdi/mdichild.h \
     gui/basic/basicform.h \
     config/appconfig.h \
-    utils/utils.h \
     core/global.h \
     core/appbase.h \
-    gui/historytree/historytree.h \
-    utils/utils.h
+    gui/historytree/historytree.h
 SOURCES       = main.cpp \
+    console/cli/logger/apploghandler.cpp \
                 mainwindow.cpp \
                 gui/mdi/mdichild.cpp \
     gui/basic/basicform.cpp \
     config/appconfig.cpp \
-    utils/utils.cpp \
     core/appbase.cpp \
-    gui/historytree/historytree.cpp \
-    utils/utils.cpp
+    gui/historytree/historytree.cpp
 RESOURCES     = AppBase.qrc
 
 # install

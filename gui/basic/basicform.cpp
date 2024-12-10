@@ -1,7 +1,6 @@
 #include "basicform.h"
 #include "ui_basicform.h"
 #include "gui/historytree/historytree.h"
-#include "utils/utils.h"
 #include <QMessageBox>
 #include <QThread>
 #include <QDebug>
@@ -35,7 +34,7 @@ void BasicForm::appendText(QString text)
 
 void BasicForm::on_pushButton_pressed()
 {
-    Utils *utils = new Utils();
+    //Utils *utils = new Utils();
     ui->infoText->append("Will Hang and crash after 5 seconds");
     QThread::sleep(5);
     //utils->crashIt();
