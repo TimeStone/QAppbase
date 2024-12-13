@@ -6,6 +6,8 @@
 #include <QMessageLogContext>
 #include <QFile>
 
+QTextStream Apploghandler::out(stdout);
+
 Apploghandler::Apploghandler(QObject *parent) : QObject(parent)
 {
 

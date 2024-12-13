@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QTextStream>
 
+
+
 class Apploghandler : public QObject
 {
     Q_OBJECT
