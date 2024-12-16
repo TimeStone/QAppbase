@@ -1,0 +1,4 @@
+deb http://192.168.10.115/ubuntu/ jammy main restricted universe multiverse
+deb http://192.168.10.115/ubuntu/ jammy-updates main restricted universe multiverse
+deb http://192.168.10.115/ubuntu/ jammy-security main restricted universe multiverse
+####AAAAAAAA inited at 2024年01月11日 16:02:40 CST####
